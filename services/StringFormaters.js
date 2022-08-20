@@ -8,7 +8,7 @@ export function Capitalise_Each_Word(str){
 ***REMOVED***
 
 export function Time_24hr(timestamp){
-    timestamp = new Date(timestamp)
+    timestamp = new Date(timestamp*1000)
     let hours = timestamp.getHours();
     let minutes = timestamp.getMinutes();
     if(minutes < 10) minutes = '0' + minutes;

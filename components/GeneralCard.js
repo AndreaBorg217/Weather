@@ -55,11 +55,11 @@
      transform :[{translateX: 100***REMOVED***, {translateY: -35***REMOVED***]
    ***REMOVED***,
    globe:{
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
     backgroundColor: '#123',
     population: 'absolute',
-    transform: [{translateY: -5***REMOVED***]
+    transform: [{translateY: -6***REMOVED***]
    ***REMOVED***,
    section:{
     flexDirection: 'row',

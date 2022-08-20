@@ -10,7 +10,7 @@
  import React from 'react';
  import {View, StyleSheet***REMOVED*** from 'react-native';
  import CurrentDetails from './components/CurrentDetails.js'
- 
+ import TemperatureCard from './components/TemperatureCard.js'
  
 let data = {
   "cod": "200",
@@ -219,6 +219,7 @@ let data = {
    return (
      <View style={styles.container***REMOVED***>
         <CurrentDetails icon = {data.list[0].weather[0].icon***REMOVED*** description = {data.list[0].weather[0].description***REMOVED*** location = {data.city.name***REMOVED*** time  = {data.list[0].dt***REMOVED***/>
+        <TemperatureCard temp ={data.list[0].main.temp***REMOVED*** max ={data.list[0].main.temp_max***REMOVED*** min ={data.list[0].main.temp_min***REMOVED*** feels_like ={data.list[0].main.feels_like***REMOVED***/>
      </View>
    );
  ***REMOVED***;

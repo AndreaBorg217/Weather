@@ -39,6 +39,7 @@
      alignItems: 'center',
      justifyContent: 'center',
      flexDirection: 'row',
+     position: 'absolute',
      transform :[{translateY: -250***REMOVED***]
    ***REMOVED***,
    weatherCont:{

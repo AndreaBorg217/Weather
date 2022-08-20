@@ -15,3 +15,8 @@ export function Time_24hr(timestamp){
 
     return hours + ':' + minutes;
 ***REMOVED***
+
+export function FormatTemp (temp){
+    //temp = temp.toString().substring(0,1)
+    return temp[0] + temp[1] + '°'
+***REMOVED***

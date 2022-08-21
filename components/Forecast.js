@@ -13,7 +13,6 @@
  import {Format_Forecast_Data***REMOVED*** from '../services/DataUtils.js'
 
 
-
  const Card = ({temp, icon, desc, time***REMOVED***) =>{
   let uri = 'https://openweathermap.org/img/wn/' + icon + '@4x.png';
   desc = Capitalise_Each_Word(desc)
@@ -40,8 +39,6 @@ return (
 
  const Forecast = (list) => {
   let data = list.forecastData;
-  //console.log(data);
-
    return (
       <View style={styles.container***REMOVED***>
 

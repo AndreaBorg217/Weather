@@ -12,10 +12,10 @@
  import {FormatTemp***REMOVED*** from '../services/StringFormaters.js'
  
  const TemperatureCard = ({temp, max, min, feels_like***REMOVED***) => {
-    temp = FormatTemp(temp.toString())
-    feels_like = FormatTemp(feels_like.toString())
-    max = FormatTemp(max.toString())
-    min = FormatTemp(min.toString())
+    temp = FormatTemp(temp?.toString())
+    feels_like = FormatTemp(feels_like?.toString())
+    max = FormatTemp(max?.toString())
+    min = FormatTemp(min?.toString())
    return (
      <View style={styles.container***REMOVED***>
         <Image style={styles.thermometer***REMOVED*** source={require('../icons/thermometer.png')***REMOVED***/>

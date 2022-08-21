@@ -15,8 +15,8 @@
 
  const Card = ({temp, icon, desc, time***REMOVED***) =>{
   let uri = 'https://openweathermap.org/img/wn/' + icon + '@4x.png';
-  desc = Capitalise_Each_Word(desc)
-  temp = FormatTemp(temp.toString())
+  desc = Capitalise_Each_Word(desc?.toString())
+  temp = FormatTemp(temp?.toString())
   let day = FormatDay(time)
   console.log(temp, icon, desc, day)
 return (

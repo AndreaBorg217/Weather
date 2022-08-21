@@ -14,7 +14,7 @@
  
  const CurrentDetails = ({icon, description, location, time***REMOVED***) => {
     let uri = 'https://openweathermap.org/img/wn/' + icon + '@4x.png';
-    description = Capitalise_Each_Word(description)
+    description = Capitalise_Each_Word(description?.toString())
     time = Time_24hr(time)
    return (
      <View style={styles.container***REMOVED***>

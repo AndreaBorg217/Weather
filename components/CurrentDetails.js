@@ -63,7 +63,7 @@
     height: 145,
     alignItems: 'center',
     justifyContent: 'center',
-    transform :[{translateY: 5***REMOVED***],
+    transform :[{translateY: -5***REMOVED***],
     margin: 20
    ***REMOVED***,
    time:{

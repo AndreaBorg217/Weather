@@ -18,7 +18,6 @@
   desc = Capitalise_Each_Word(desc?.toString())
   temp = FormatTemp(temp?.toString())
   let day = FormatDay(time)
-  console.log(temp, icon, desc, day)
 return (
    <View style={styles.card***REMOVED***>
 

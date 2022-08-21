@@ -17,6 +17,13 @@ export function Time_24hr(timestamp){
 ***REMOVED***
 
 export function FormatTemp (temp){
-    //temp = temp.toString().substring(0,1)
     return temp[0] + temp[1] + '°'
+***REMOVED***
+
+
+export function FormatDay(timestamp){
+    timestamp = new Date(timestamp*1000);
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var day = days[timestamp.getDay()]
+    return Capitalise_Each_Word(day.substring(0,3))
 ***REMOVED***

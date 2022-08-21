@@ -7,10 +7,17 @@ export function Capitalise_Each_Word(str){
     return str?.join(" ");
 ***REMOVED***
 
+export function CurrentTime(){
+    let timestamp = new Date()
+    let hours = timestamp.getHours();
+    let minutes = timestamp.getMinutes(); 
+    return hours + ':' + minutes
+***REMOVED***
+
 export function Time_24hr(timestamp){
     console.log(timestamp);
     timestamp = new Date(timestamp*1000)
-    let hours = timestamp.getHours()-2;
+    let hours = timestamp.getHours();
     let minutes = timestamp.getMinutes();
     if(minutes < 10) minutes = '0' + minutes;
 

@@ -7,15 +7,23 @@
  * @flow strict-local
  */
 
- import React from 'react';
+ import React, {useState, useEffect***REMOVED*** from 'react';
  import {View, StyleSheet, Image, Text***REMOVED*** from 'react-native';
- import {Capitalise_Each_Word, Time_24hr***REMOVED*** from '../services/StringFormaters.js'
+ import {Capitalise_Each_Word, Time_24hr, CurrentTime***REMOVED*** from '../services/StringFormaters.js'
  
  
- const CurrentDetails = ({icon, description, location, time***REMOVED***) => {
+ const CurrentDetails = ({icon, description, location***REMOVED***) => {
     let uri = 'https://openweathermap.org/img/wn/' + icon + '@4x.png';
     description = Capitalise_Each_Word(description?.toString())
-    time = Time_24hr(time)
+
+    const [time, setTime] = useState()
+
+    useEffect(() => {
+      setInterval(() => {
+        setTime(CurrentTime())
+ ***REMOVED***, 1000);
+    ***REMOVED***, [])
+
    return (
      <View style={styles.container***REMOVED***>
 

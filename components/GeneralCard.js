@@ -52,7 +52,7 @@
      alignItems: 'center',
      justifyContent: 'center',
      position: 'absolute',
-     transform :[{translateX: 100***REMOVED***, {translateY: -30***REMOVED***]
+     transform :[{translateX: 90***REMOVED***, {translateY: -30***REMOVED***]
    ***REMOVED***,
    globe:{
     width: 35,

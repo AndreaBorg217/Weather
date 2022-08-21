@@ -37,14 +37,14 @@
  const styles = StyleSheet.create({
    container: {
      width: 146,
-     height: 137,
+     height: 130,
      alignItems: 'center',
      justifyContent: 'center',
      borderColor: 'white',
      borderWidth: 1,
      borderRadius: 10,
      position: 'absolute',
-     transform: [{translateX: -100***REMOVED***, {translateY: -90***REMOVED***]
+     transform: [{translateX: -100***REMOVED***, {translateY: -105***REMOVED***]
     ***REMOVED***,
     temp:{
         fontSize: 50,

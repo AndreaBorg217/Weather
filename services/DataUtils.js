@@ -25,3 +25,19 @@ export function CondenseData(data) {
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
+
+export function RainVolume(list){
+  let volume = 0;
+  list?.slice(0,7).forEach(element =>{
+    if(element.rain){
+      volume += element.rain['3h']
+    ***REMOVED***
+  ***REMOVED***);
+
+  if(volume<10){
+    return volume + 'mm'
+  ***REMOVED***
+  else{
+    return (volume/10) + 'cm'
+  ***REMOVED***
+***REMOVED***

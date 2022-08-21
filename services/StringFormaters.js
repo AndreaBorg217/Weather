@@ -37,3 +37,9 @@ export function FormatDay(timestamp){
     var day = days[timestamp.getDay()]
     return Capitalise_Each_Word(day?.substring(0,3))
 ***REMOVED***
+
+
+export function FormatPercentage(decimal){
+    decimal = decimal * 100
+    return decimal + '%'
+***REMOVED***

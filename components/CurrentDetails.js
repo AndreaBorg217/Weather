@@ -40,7 +40,7 @@
      justifyContent: 'center',
      flexDirection: 'row',
      position: 'absolute',
-     transform :[{translateY: -250***REMOVED***]
+     transform :[{translateY: -270***REMOVED***]
    ***REMOVED***,
    weatherCont:{
     width: 177,

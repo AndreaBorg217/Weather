@@ -43,6 +43,7 @@ return (
       <View style={styles.container***REMOVED***>
 
         <Text style = {styles.header***REMOVED***>5 day forecast</Text>
+        
         <View style = {styles.days***REMOVED***> 
           <FlatList
             data={data***REMOVED***
@@ -51,6 +52,7 @@ return (
             horizontal = {true***REMOVED***
           />
         </View>
+        
       </View>
    );
  ***REMOVED***;
@@ -99,7 +101,6 @@ return (
     color: 'white',
     fontSize: 35,
     padding: 10,
-    //transform: [{translateY: 10***REMOVED***]
    ***REMOVED***,
    icon:{
     width: 60,
@@ -111,7 +112,7 @@ return (
     
    ***REMOVED***,
    days:{
-    transform: [{translateY: 30***REMOVED***]
+    transform: [{translateY: 20***REMOVED***]
    ***REMOVED***
  ***REMOVED***);
  

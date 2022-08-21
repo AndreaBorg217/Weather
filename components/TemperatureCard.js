@@ -44,7 +44,7 @@
      borderWidth: 1,
      borderRadius: 10,
      position: 'absolute',
-     transform: [{translateX: -100***REMOVED***, {translateY: -70***REMOVED***]
+     transform: [{translateX: -100***REMOVED***, {translateY: -90***REMOVED***]
     ***REMOVED***,
     temp:{
         fontSize: 50,

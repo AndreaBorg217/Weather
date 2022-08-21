@@ -44,58 +44,57 @@
  
  const styles = StyleSheet.create({
    container: {
-     width: 163,
-     height: 208,
+     width: 180,
+     height: 275,
      borderColor: 'white',
      borderWidth: 1,
      borderRadius: 10,
      alignItems: 'center',
      justifyContent: 'center',
      position: 'absolute',
-     transform :[{translateX: 100***REMOVED***, {translateY: -35***REMOVED***]
+     transform :[{translateX: 100***REMOVED***, {translateY: -30***REMOVED***]
    ***REMOVED***,
    globe:{
     width: 35,
     height: 35,
     backgroundColor: '#123',
-    population: 'absolute',
-    transform: [{translateY: -6***REMOVED***]
+    transform: [{translateY: -13***REMOVED***]
    ***REMOVED***,
    section:{
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 10,
+    paddingBottom: 18,
     transform: [{translateY: -10***REMOVED***]
    ***REMOVED***,
    icon:{
-    width: 28,
-    height: 34,
+    width: 35,
+    height: 41,
     marginRight: 60
    ***REMOVED***,
    text:{
-    fontSize: 17,
+    fontSize: 20,
     color: 'white',
    ***REMOVED***,
    sunrise:{
-    width: 30,
-    height: 40,
+    width: 35,
+    height: 45,
     marginRight: 60
    ***REMOVED***,
    wind:{
-    width: 40,
-    height: 40,
+    width: 45,
+    height: 45,
     marginRight: 30
    ***REMOVED***,
    sunset:{
-    width: 30,
-    height: 40,
+    width: 35,
+    height: 45,
     marginRight: 50
    ***REMOVED***,
    suntext:{
-    fontSize: 17,
+    fontSize: 20,
     color: 'white',
-    transform: [{translateY: 5***REMOVED***]
+    transform: [{translateY: 10***REMOVED***]
    ***REMOVED***
  ***REMOVED***);
  

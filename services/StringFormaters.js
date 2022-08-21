@@ -11,6 +11,7 @@ export function CurrentTime(){
     let timestamp = new Date()
     let hours = timestamp.getHours();
     let minutes = timestamp.getMinutes(); 
+    if(minutes < 10) minutes = '0' + minutes;
     return hours + ':' + minutes
 ***REMOVED***
 

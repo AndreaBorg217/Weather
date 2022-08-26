@@ -56,7 +56,7 @@
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 10,
+        marginBottom: 25,
         transform: [{translateY: 20***REMOVED***]
     ***REMOVED***,
     prob:{
@@ -67,7 +67,8 @@
     vol:{
         width: 30,
         height: 30,
-        transform: [{translateX: -10***REMOVED***]  
+        position: 'absolute',
+        transform: [{translateX: -40***REMOVED***]  
     ***REMOVED***,
     probtext: {
         color: 'white',
@@ -76,7 +77,8 @@
     voltext:{
         color: 'white',
         fontSize: 16,
-        transform: [{translateX: 20***REMOVED***]  
+        position: 'absolute',
+        transform: [{translateX: 40***REMOVED***]  
     ***REMOVED***
     
  ***REMOVED***);

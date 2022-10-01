@@ -6,7 +6,7 @@
 
 All icons have been obtained from FlatIcon except the one displayed in the top left corner and those in the forecast (obtained from the API).
 
-In order for this app to function create a file in the root folder called sensitive.js with the code below: <br/>
+In order for this app to function create a file in the services folder called sensitive.js with the code below: <br/>
 `
 export const key = //Your API key; 
 export const location = //Your location; 

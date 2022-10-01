@@ -20,7 +20,7 @@ export function CondenseData(data) {
 ***REMOVED***
 
 ***REMOVED***
-    const response = await axios.get('https://api.openweathermap.org/data/2.5/forecast?q=' + location + '&' + 'appid=' + key + '&units=metricc')
+***REMOVED***
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***

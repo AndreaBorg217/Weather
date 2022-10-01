@@ -15,8 +15,8 @@
  import Forecast from './components/Forecast.js';
  import RainCard from './components/RainCard.js';
  import {Format_Forecast_Data, CondenseData, RainVolume***REMOVED*** from './services/DataUtils.js';
+ import {key, location***REMOVED*** from './services/sensitive.js'
  import axios from 'axios'
-
  //import {sample***REMOVED*** from './sampleData.js';
 
  
@@ -24,7 +24,7 @@
   const [data, setData] = useState()
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('https://api.openweathermap.org/data/2.5/forecast?q=' + location + '&' + 'appid=' + key + '&units=metricc')
+      const response = await axios.get('https://api.openweathermap.org/data/2.5/forecast?q=' + location + '&' + 'appid=' + key + '&units=metric')
   ***REMOVED***
          setData(response.data)
   ***REMOVED***

@@ -7,5 +7,5 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *) {
     facebook::react::MainApplicationTurboModuleManagerDelegate::
         registerNatives();
     facebook::react::MainComponentsRegistry::registerNatives();
-  ***REMOVED***);
-***REMOVED***
+  });
+}

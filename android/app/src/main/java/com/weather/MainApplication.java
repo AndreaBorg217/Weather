@@ -20,7 +20,7 @@ public class MainApplication extends Application implements ReactApplication {
         @Override
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
-  ***REMOVED***
+        }
 
         @Override
         protected List<ReactPackage> getPackages() {
@@ -29,13 +29,13 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           return packages;
-  ***REMOVED***
+        }
 
         @Override
         protected String getJSMainModuleName() {
           return "index";
-  ***REMOVED***
-***REMOVED***;
+        }
+      };
 
   private final ReactNativeHost mNewArchitectureNativeHost =
       new MainApplicationReactNativeHost(this);
@@ -44,10 +44,10 @@ public class MainApplication extends Application implements ReactApplication {
   public ReactNativeHost getReactNativeHost() {
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
       return mNewArchitectureNativeHost;
-    ***REMOVED*** else {
+    } else {
       return mReactNativeHost;
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
 
   @Override
   public void onCreate() {
@@ -56,7 +56,7 @@ public class MainApplication extends Application implements ReactApplication {
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
-  ***REMOVED***
+  }
 
   /**
    * Loads Flipper in React Native templates. Call this in the onCreate method with something like
@@ -77,15 +77,15 @@ public class MainApplication extends Application implements ReactApplication {
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
-***REMOVED*** catch (ClassNotFoundException e) {
+      } catch (ClassNotFoundException e) {
         e.printStackTrace();
-***REMOVED*** catch (NoSuchMethodException e) {
+      } catch (NoSuchMethodException e) {
         e.printStackTrace();
-***REMOVED*** catch (IllegalAccessException e) {
+      } catch (IllegalAccessException e) {
         e.printStackTrace();
-***REMOVED*** catch (InvocationTargetException e) {
+      } catch (InvocationTargetException e) {
         e.printStackTrace();
-***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+      }
+    }
+  }
+}

@@ -7,12 +7,12 @@
  * @flow strict-local
  */
 
- import React, {useState, useEffect***REMOVED*** from 'react';
- import {View, StyleSheet, Image, Text***REMOVED*** from 'react-native';
- import {Capitalise_Each_Word, Time_24hr, CurrentTime***REMOVED*** from '../services/StringFormaters.js'
+ import React, {useState, useEffect} from 'react';
+ import {View, StyleSheet, Image, Text} from 'react-native';
+ import {Capitalise_Each_Word, Time_24hr, CurrentTime} from '../services/StringFormaters.js'
  
  
- const CurrentDetails = ({icon, description, location***REMOVED***) => {
+ const CurrentDetails = ({icon, description, location}) => {
     let uri = 'https://openweathermap.org/img/wn/' + icon + '@4x.png';
     description = Capitalise_Each_Word(description?.toString())
 
@@ -21,24 +21,24 @@
     useEffect(() => {
       setInterval(() => {
         setTime(CurrentTime())
- ***REMOVED***, 1000);
-    ***REMOVED***, [])
+       }, 1000);
+    }, [])
 
    return (
-     <View style={styles.container***REMOVED***>
+     <View style={styles.container}>
 
-     <View style = {styles.weatherCont***REMOVED***>
-        <Image style={styles.icon***REMOVED*** source={{uri: uri***REMOVED******REMOVED***/>
-        <Text style = {styles.description***REMOVED***>{description***REMOVED***</Text>
+     <View style = {styles.weatherCont}>
+        <Image style={styles.icon} source={{uri: uri}}/>
+        <Text style = {styles.description}>{description}</Text>
      </View>
 
-     <View style = {styles.timeloc***REMOVED***>
-     <Text style = {styles.time***REMOVED***>{time***REMOVED***</Text>
-     <Text style = {styles.loc***REMOVED***>{location***REMOVED***</Text>
+     <View style = {styles.timeloc}>
+     <Text style = {styles.time}>{time}</Text>
+     <Text style = {styles.loc}>{location}</Text>
     </View>
      </View>
    );
- ***REMOVED***;
+ };
  
  const styles = StyleSheet.create({
    container: {
@@ -48,41 +48,41 @@
      justifyContent: 'center',
      flexDirection: 'row',
      position: 'absolute',
-     transform :[{translateY: -270***REMOVED***]
-   ***REMOVED***,
+     transform :[{translateY: -270}]
+   },
    weatherCont:{
     width: 177,
     height: 145,
     alignItems: 'center',
     justifyContent: 'center',
     margin: 20
-   ***REMOVED***,
+   },
    icon:{
     width: 200,
     height: 200,
-   ***REMOVED***,
+   },
    description:{
     fontSize: 16,
     color: 'white',
-    transform :[{translateY: -50***REMOVED***]
-   ***REMOVED***,
+    transform :[{translateY: -50}]
+   },
    timeloc:{
     width: 177,
     height: 145,
     alignItems: 'center',
     justifyContent: 'center',
-    transform :[{translateY: -5***REMOVED***],
+    transform :[{translateY: -5}],
     margin: 20
-   ***REMOVED***,
+   },
    time:{
     fontSize: 58,
     color: 'white',
-   ***REMOVED***,
+   },
    loc:{
     fontSize: 25,
     color: 'white',
-   ***REMOVED***
- ***REMOVED***);
+   }
+ });
  
  export default CurrentDetails;
  

@@ -42,8 +42,8 @@ public class ReactNativeFlipper {
             @Override
             public void apply(OkHttpClient.Builder builder) {
               builder.addNetworkInterceptor(new FlipperOkhttpInterceptor(networkFlipperPlugin));
-      ***REMOVED***
-    ***REMOVED***);
+            }
+          });
       client.addPlugin(networkFlipperPlugin);
       client.start();
 
@@ -61,13 +61,13 @@ public class ReactNativeFlipper {
                       @Override
                       public void run() {
                         client.addPlugin(new FrescoFlipperPlugin());
-                ***REMOVED***
-              ***REMOVED***);
-        ***REMOVED***
-      ***REMOVED***);
-***REMOVED*** else {
+                      }
+                    });
+              }
+            });
+      } else {
         client.addPlugin(new FrescoFlipperPlugin());
-***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+      }
+    }
+  }
+}

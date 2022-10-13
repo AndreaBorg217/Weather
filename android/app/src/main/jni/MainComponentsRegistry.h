@@ -26,7 +26,7 @@ class MainComponentsRegistry
   static jni::local_ref<jhybriddata> initHybrid(
       jni::alias_ref<jclass>,
       ComponentFactory *delegate);
-***REMOVED***;
+};
 
-***REMOVED*** // namespace react
-***REMOVED*** // namespace facebook
+} // namespace react
+} // namespace facebook

@@ -12,5 +12,5 @@ std::shared_ptr<TurboModule> MainApplicationModuleProvider(
     const std::string moduleName,
     const JavaTurboModule::InitParams &params);
 
-***REMOVED*** // namespace react
-***REMOVED*** // namespace facebook
+} // namespace react
+} // namespace facebook

@@ -8,7 +8,7 @@
 namespace facebook {
 namespace react {
 
-MainComponentsRegistry::MainComponentsRegistry(ComponentFactory *delegate) {***REMOVED***
+MainComponentsRegistry::MainComponentsRegistry(ComponentFactory *delegate) {}
 
 std::shared_ptr<ComponentDescriptorProviderRegistry const>
 MainComponentsRegistry::sharedProviderRegistry() {
@@ -20,7 +20,7 @@ MainComponentsRegistry::sharedProviderRegistry() {
   // providerRegistry->add(concreteComponentDescriptorProvider<
   //        AocViewerComponentDescriptor>());
   return providerRegistry;
-***REMOVED***
+}
 
 jni::local_ref<MainComponentsRegistry::jhybriddata>
 MainComponentsRegistry::initHybrid(
@@ -34,7 +34,7 @@ MainComponentsRegistry::initHybrid(
       -> ComponentDescriptorRegistry::Shared {
     auto registry = MainComponentsRegistry::sharedProviderRegistry()
                         ->createComponentDescriptorRegistry(
-                            {eventDispatcher, contextContainer***REMOVED***);
+                            {eventDispatcher, contextContainer});
 
     auto mutableRegistry =
         std::const_pointer_cast<ComponentDescriptorRegistry>(registry);
@@ -42,20 +42,20 @@ MainComponentsRegistry::initHybrid(
     mutableRegistry->setFallbackComponentDescriptor(
         std::make_shared<UnimplementedNativeViewComponentDescriptor>(
             ComponentDescriptorParameters{
-                eventDispatcher, contextContainer, nullptr***REMOVED***));
+                eventDispatcher, contextContainer, nullptr}));
 
     return registry;
-  ***REMOVED***;
+  };
 
   delegate->buildRegistryFunction = buildRegistryFunction;
   return instance;
-***REMOVED***
+}
 
 void MainComponentsRegistry::registerNatives() {
   registerHybrid({
       makeNativeMethod("initHybrid", MainComponentsRegistry::initHybrid),
-  ***REMOVED***);
-***REMOVED***
+  });
+}
 
-***REMOVED*** // namespace react
-***REMOVED*** // namespace facebook
+} // namespace react
+} // namespace facebook

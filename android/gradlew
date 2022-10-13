@@ -32,8 +32,8 @@
 #       Busybox and similar reduced shells will NOT work, because this script
 #       requires all of these POSIX shell features:
 #         * functions;
-#         * expansions «$var», «${var***REMOVED***», «${var:-default***REMOVED***», «${var+SET***REMOVED***»,
-#           «${var#prefix***REMOVED***», «${var%suffix***REMOVED***», and «$( cmd )»;
+#         * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
+#           «${var#prefix}», «${var%suffix}», and «$( cmd )»;
 #         * compound commands having a testable exit status, especially «case»;
 #         * various built-in commands including «command», «set», and «ulimit».
 #
@@ -69,21 +69,21 @@ app_path=$0
 
 # Need this for daisy-chained symlinks.
 while
-    APP_HOME=${app_path%"${app_path##*/***REMOVED***"***REMOVED***  # leaves a trailing /; empty if no leading path
+    APP_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
     [ -h "$app_path" ]
 do
     ls=$( ls -ld "$app_path" )
-    link=${ls#*' -> '***REMOVED***
+    link=${ls#*' -> '}
     case $link in             #(
       /*)   app_path=$link ;; #(
       *)    app_path=$APP_HOME$link ;;
     esac
 done
 
-APP_HOME=$( cd "${APP_HOME:-./***REMOVED***" && pwd -P ) || exit
+APP_HOME=$( cd "${APP_HOME:-./}" && pwd -P ) || exit
 
 APP_NAME="Gradle"
-APP_BASE_NAME=${0##*/***REMOVED***
+APP_BASE_NAME=${0##*/}
 
 # Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
 DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
@@ -93,14 +93,14 @@ MAX_FD=maximum
 
 warn () {
     echo "$*"
-***REMOVED*** >&2
+} >&2
 
 die () {
     echo
     echo "$*"
     echo
     exit 1
-***REMOVED*** >&2
+} >&2
 
 # OS specific support (must be 'true' or 'false').
 cygwin=false
@@ -174,7 +174,7 @@ if "$cygwin" || "$msys" ; then
         if
             case $arg in                                #(
               -*)   false ;;                            # don't mess with options #(
-              /?*)  t=${arg#/***REMOVED*** t=/${t%%/****REMOVED***              # looks like a POSIX filepath
+              /?*)  t=${arg#/} t=/${t%%/*}              # looks like a POSIX filepath
                     [ -e "$t" ] ;;                      #(
               *)    false ;;
             esac
@@ -212,7 +212,7 @@ set -- \
 # In Bash we could simply go:
 #
 #   readarray ARGS < <( xargs -n1 <<<"$var" ) &&
-#   set -- "${ARGS[@]***REMOVED***" "$@"
+#   set -- "${ARGS[@]}" "$@"
 #
 # but POSIX shell has neither arrays nor command substitution, so instead we
 # post-process each arg (as a line of input to sed) to backslash-escape any

@@ -32,7 +32,7 @@ class MainApplicationTurboModuleManagerDelegate
    * created by instances of this class.
    */
   bool canCreateTurboModule(std::string name);
-***REMOVED***;
+};
 
-***REMOVED*** // namespace react
-***REMOVED*** // namespace facebook
+} // namespace react
+} // namespace facebook

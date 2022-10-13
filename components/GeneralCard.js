@@ -8,39 +8,39 @@
  */
 
  import React from 'react';
- import {View, StyleSheet, Image, Text***REMOVED*** from 'react-native';
- import {Time_24hr***REMOVED*** from '../services/StringFormaters.js'
+ import {View, StyleSheet, Image, Text} from 'react-native';
+ import {Time_24hr} from '../services/StringFormaters.js'
  
- const GeneralCard = ({humidity, wind, sunrise, sunset***REMOVED***) => {
+ const GeneralCard = ({humidity, wind, sunrise, sunset}) => {
     sunrise = Time_24hr(sunrise)
     sunset = Time_24hr(sunset)
    return (
-     <View style={styles.container***REMOVED***>
+     <View style={styles.container}>
 
-        <Image style={styles.globe***REMOVED*** source={require('../icons/globe.png')***REMOVED***/>
+        <Image style={styles.globe} source={require('../icons/globe.png')}/>
 
-        <View style = {styles.section***REMOVED***>
-            <Image style={styles.icon***REMOVED*** source={require('../icons/humidity.png')***REMOVED***/>
-            <Text style={styles.text***REMOVED***>{humidity***REMOVED***%</Text>
+        <View style = {styles.section}>
+            <Image style={styles.icon} source={require('../icons/humidity.png')}/>
+            <Text style={styles.text}>{humidity}%</Text>
         </View>
 
-        <View style = {styles.section***REMOVED***>
-            <Image style={styles.wind***REMOVED*** source={require('../icons/wind.png')***REMOVED***/>
-            <Text style={styles.text***REMOVED***>{wind***REMOVED***m/s</Text>
+        <View style = {styles.section}>
+            <Image style={styles.wind} source={require('../icons/wind.png')}/>
+            <Text style={styles.text}>{wind}m/s</Text>
         </View>
 
-        <View style = {styles.section***REMOVED***>
-            <Image style={styles.sunrise***REMOVED*** source={require('../icons/sunrise.png')***REMOVED***/>
-            <Text style={styles.text***REMOVED***>{sunrise***REMOVED***</Text>
+        <View style = {styles.section}>
+            <Image style={styles.sunrise} source={require('../icons/sunrise.png')}/>
+            <Text style={styles.text}>{sunrise}</Text>
         </View>
 
-        <View style = {styles.section***REMOVED***>
-            <Image style={styles.sunset***REMOVED*** source={require('../icons/sunset.png')***REMOVED***/>
-            <Text style={styles.suntext***REMOVED***>{sunset***REMOVED***</Text>
+        <View style = {styles.section}>
+            <Image style={styles.sunset} source={require('../icons/sunset.png')}/>
+            <Text style={styles.suntext}>{sunset}</Text>
         </View>
      </View>
    );
- ***REMOVED***;
+ };
  
  const styles = StyleSheet.create({
    container: {
@@ -52,51 +52,51 @@
      alignItems: 'center',
      justifyContent: 'center',
      position: 'absolute',
-     transform :[{translateX: 90***REMOVED***, {translateY: -30***REMOVED***]
-   ***REMOVED***,
+     transform :[{translateX: 90}, {translateY: -30}]
+   },
    globe:{
     width: 35,
     height: 35,
     backgroundColor: '#123',
-    transform: [{translateY: -13***REMOVED***]
-   ***REMOVED***,
+    transform: [{translateY: -13}]
+   },
    section:{
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 18,
-    transform: [{translateY: -10***REMOVED***]
-   ***REMOVED***,
+    transform: [{translateY: -10}]
+   },
    icon:{
     width: 35,
     height: 41,
     marginRight: 60
-   ***REMOVED***,
+   },
    text:{
     fontSize: 20,
     color: 'white',
-   ***REMOVED***,
+   },
    sunrise:{
     width: 35,
     height: 45,
     marginRight: 60
-   ***REMOVED***,
+   },
    wind:{
     width: 45,
     height: 45,
     marginRight: 30
-   ***REMOVED***,
+   },
    sunset:{
     width: 35,
     height: 45,
     marginRight: 50
-   ***REMOVED***,
+   },
    suntext:{
     fontSize: 20,
     color: 'white',
-    transform: [{translateY: 10***REMOVED***]
-   ***REMOVED***
- ***REMOVED***);
+    transform: [{translateY: 10}]
+   }
+ });
  
  export default GeneralCard;
  

@@ -23,7 +23,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   RCTSurfacePresenterBridgeAdapter *_bridgeAdapter;
   std::shared_ptr<const facebook::react::ReactNativeConfig> _reactNativeConfig;
   facebook::react::ContextContainer::Shared _contextContainer;
-***REMOVED***
+}
 @end
 #endif
 
@@ -48,9 +48,9 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
   if (@available(iOS 13.0, *)) {
     rootView.backgroundColor = [UIColor systemBackgroundColor];
-  ***REMOVED*** else {
+  } else {
     rootView.backgroundColor = [UIColor whiteColor];
-  ***REMOVED***
+  }
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
@@ -58,7 +58,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
-***REMOVED***
+}
 
 /// This method controls whether the `concurrentRoot`feature of React18 is turned on or off.
 ///
@@ -69,7 +69,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 {
   // Switch this bool to turn on and off the concurrent root
   return true;
-***REMOVED***
+}
 
 - (NSDictionary *)prepareInitialProps
 {
@@ -80,7 +80,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 #endif
 
   return initProps;
-***REMOVED***
+}
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
@@ -89,7 +89,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
-***REMOVED***
+}
 
 #if RCT_NEW_ARCH_ENABLED
 
@@ -101,32 +101,32 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
                                                              delegate:self
                                                             jsInvoker:bridge.jsCallInvoker];
   return RCTAppSetupDefaultJsExecutorFactory(bridge, _turboModuleManager);
-***REMOVED***
+}
 
 #pragma mark RCTTurboModuleManagerDelegate
 
 - (Class)getModuleClassFromName:(const char *)name
 {
   return RCTCoreModulesClassProvider(name);
-***REMOVED***
+}
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
                                                       jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker
 {
   return nullptr;
-***REMOVED***
+}
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
                                                      initParams:
                                                          (const facebook::react::ObjCTurboModule::InitParams &)params
 {
   return nullptr;
-***REMOVED***
+}
 
 - (id<RCTTurboModule>)getModuleInstanceFromClass:(Class)moduleClass
 {
   return RCTAppSetupDefaultModuleFromClass(moduleClass);
-***REMOVED***
+}
 
 #endif
 

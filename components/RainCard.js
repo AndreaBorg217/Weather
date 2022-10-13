@@ -8,30 +8,30 @@
  */
 
  import React from 'react';
- import {View, StyleSheet, Image, Text***REMOVED*** from 'react-native';
- import {FormatPercentage***REMOVED*** from '../services/StringFormaters.js'
+ import {View, StyleSheet, Image, Text} from 'react-native';
+ import {FormatPercentage} from '../services/StringFormaters.js'
 
- const RainCard = ({pop, vol***REMOVED***) => {
+ const RainCard = ({pop, vol}) => {
     pop = FormatPercentage(pop)
    return (
-     <View style={styles.container***REMOVED***>
-        <Image style={styles.rain***REMOVED*** source={require('../icons/rain.png')***REMOVED***/>
+     <View style={styles.container}>
+        <Image style={styles.rain} source={require('../icons/rain.png')}/>
 
-        <View style = {styles.section***REMOVED***>
-            <Image style={styles.prob***REMOVED*** source={require('../icons/percentage.png')***REMOVED***/>
-            <Text style={styles.probtext***REMOVED***>{pop***REMOVED***</Text>
+        <View style = {styles.section}>
+            <Image style={styles.prob} source={require('../icons/percentage.png')}/>
+            <Text style={styles.probtext}>{pop}</Text>
         </View>
 
-        <View style = {styles.section***REMOVED***>
-            <Image style={styles.vol***REMOVED*** source={require('../icons/scale.png')***REMOVED***/>
-            <Text style={styles.voltext***REMOVED***>{vol***REMOVED***</Text>
+        <View style = {styles.section}>
+            <Image style={styles.vol} source={require('../icons/scale.png')}/>
+            <Text style={styles.voltext}>{vol}</Text>
         </View>
 
      </View>
 
  
    );
- ***REMOVED***;
+ };
  
  const styles = StyleSheet.create({
    container: {
@@ -43,45 +43,45 @@
      borderWidth: 1,
      borderRadius: 10,
      position: 'absolute',
-     transform: [{translateX: -100***REMOVED***, {translateY: 50***REMOVED***]
-    ***REMOVED***,
+     transform: [{translateX: -100}, {translateY: 50}]
+    },
     rain:{
       width: 45,
       height: 45,
       backgroundColor: '#123',
       position: 'absolute',
-      transform: [{translateY: -50***REMOVED***]
-    ***REMOVED***,
+      transform: [{translateY: -50}]
+    },
     section: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 25,
-        transform: [{translateY: 20***REMOVED***]
-    ***REMOVED***,
+        transform: [{translateY: 20}]
+    },
     prob:{
         width: 20,
         height: 20,
         marginRight: 60
-    ***REMOVED***,
+    },
     vol:{
         width: 30,
         height: 30,
         position: 'absolute',
-        transform: [{translateX: -40***REMOVED***]  
-    ***REMOVED***,
+        transform: [{translateX: -40}]  
+    },
     probtext: {
         color: 'white',
         fontSize: 18,
-    ***REMOVED***,
+    },
     voltext:{
         color: 'white',
         fontSize: 16,
         position: 'absolute',
-        transform: [{translateX: 40***REMOVED***]  
-    ***REMOVED***
+        transform: [{translateX: 40}]  
+    }
     
- ***REMOVED***);
+ });
  
  export default RainCard;
  

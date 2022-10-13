@@ -23,7 +23,7 @@ public class MainApplicationTurboModuleManagerDelegate
   protected MainApplicationTurboModuleManagerDelegate(
       ReactApplicationContext reactApplicationContext, List<ReactPackage> packages) {
     super(reactApplicationContext, packages);
-  ***REMOVED***
+  }
 
   protected native HybridData initHybrid();
 
@@ -33,8 +33,8 @@ public class MainApplicationTurboModuleManagerDelegate
     protected MainApplicationTurboModuleManagerDelegate build(
         ReactApplicationContext context, List<ReactPackage> packages) {
       return new MainApplicationTurboModuleManagerDelegate(context, packages);
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
 
   @Override
   protected synchronized void maybeLoadOtherSoLibraries() {
@@ -43,6 +43,6 @@ public class MainApplicationTurboModuleManagerDelegate
       // make sure you update the name here as well.
       SoLoader.loadLibrary("weather_appmodules");
       sIsSoLibraryLoaded = true;
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}

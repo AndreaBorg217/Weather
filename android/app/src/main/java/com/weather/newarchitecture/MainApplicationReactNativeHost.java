@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A {@link ReactNativeHost***REMOVED*** that helps you load everything needed for the New Architecture, both
+ * A {@link ReactNativeHost} that helps you load everything needed for the New Architecture, both
  * TurboModule delegates and the Fabric Renderer.
  *
  * <p>Please note that this class is used ONLY if you opt-in for the New Architecture (see the
@@ -35,12 +35,12 @@ import java.util.List;
 public class MainApplicationReactNativeHost extends ReactNativeHost {
   public MainApplicationReactNativeHost(Application application) {
     super(application);
-  ***REMOVED***
+  }
 
   @Override
   public boolean getUseDeveloperSupport() {
     return BuildConfig.DEBUG;
-  ***REMOVED***
+  }
 
   @Override
   protected List<ReactPackage> getPackages() {
@@ -48,16 +48,16 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
     // Packages that cannot be autolinked yet can be added manually here, for example:
     //     packages.add(new MyReactNativePackage());
     // TurboModules must also be loaded here providing a valid TurboReactPackage implementation:
-    //     packages.add(new TurboReactPackage() { ... ***REMOVED***);
+    //     packages.add(new TurboReactPackage() { ... });
     // If you have custom Fabric Components, their ViewManagers should also be loaded here
     // inside a ReactPackage.
     return packages;
-  ***REMOVED***
+  }
 
   @Override
   protected String getJSMainModuleName() {
     return "index";
-  ***REMOVED***
+  }
 
   @NonNull
   @Override
@@ -66,7 +66,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
     // Here we provide the ReactPackageTurboModuleManagerDelegate Builder. This is necessary
     // for the new architecture and to use TurboModules correctly.
     return new MainApplicationTurboModuleManagerDelegate.Builder();
-  ***REMOVED***
+  }
 
   @Override
   protected JSIModulePackage getJSIModulePackage() {
@@ -84,7 +84,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
               @Override
               public JSIModuleType getJSIModuleType() {
                 return JSIModuleType.UIManager;
-        ***REMOVED***
+              }
 
               @Override
               public JSIModuleProvider<UIManager> getJSIModuleProvider() {
@@ -107,10 +107,10 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
                     componentFactory,
                     ReactNativeConfig.DEFAULT_CONFIG,
                     viewManagerRegistry);
-        ***REMOVED***
-      ***REMOVED***);
+              }
+            });
         return specs;
-***REMOVED***
-    ***REMOVED***;
-  ***REMOVED***
-***REMOVED***
+      }
+    };
+  }
+}

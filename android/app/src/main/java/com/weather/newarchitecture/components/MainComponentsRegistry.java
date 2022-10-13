@@ -17,7 +17,7 @@ import com.facebook.soloader.SoLoader;
 public class MainComponentsRegistry {
   static {
     SoLoader.loadLibrary("fabricjni");
-  ***REMOVED***
+  }
 
   @DoNotStrip private final HybridData mHybridData;
 
@@ -27,10 +27,10 @@ public class MainComponentsRegistry {
   @DoNotStrip
   private MainComponentsRegistry(ComponentFactory componentFactory) {
     mHybridData = initHybrid(componentFactory);
-  ***REMOVED***
+  }
 
   @DoNotStrip
   public static MainComponentsRegistry register(ComponentFactory componentFactory) {
     return new MainComponentsRegistry(componentFactory);
-  ***REMOVED***
-***REMOVED***
+  }
+}

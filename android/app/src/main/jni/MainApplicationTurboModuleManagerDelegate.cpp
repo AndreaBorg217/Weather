@@ -8,7 +8,7 @@ jni::local_ref<MainApplicationTurboModuleManagerDelegate::jhybriddata>
 MainApplicationTurboModuleManagerDelegate::initHybrid(
     jni::alias_ref<jhybridobject>) {
   return makeCxxInstance();
-***REMOVED***
+}
 
 void MainApplicationTurboModuleManagerDelegate::registerNatives() {
   registerHybrid({
@@ -17,8 +17,8 @@ void MainApplicationTurboModuleManagerDelegate::registerNatives() {
       makeNativeMethod(
           "canCreateTurboModule",
           MainApplicationTurboModuleManagerDelegate::canCreateTurboModule),
-  ***REMOVED***);
-***REMOVED***
+  });
+}
 
 std::shared_ptr<TurboModule>
 MainApplicationTurboModuleManagerDelegate::getTurboModule(
@@ -26,20 +26,20 @@ MainApplicationTurboModuleManagerDelegate::getTurboModule(
     const std::shared_ptr<CallInvoker> jsInvoker) {
   // Not implemented yet: provide pure-C++ NativeModules here.
   return nullptr;
-***REMOVED***
+}
 
 std::shared_ptr<TurboModule>
 MainApplicationTurboModuleManagerDelegate::getTurboModule(
     const std::string name,
     const JavaTurboModule::InitParams &params) {
   return MainApplicationModuleProvider(name, params);
-***REMOVED***
+}
 
 bool MainApplicationTurboModuleManagerDelegate::canCreateTurboModule(
     std::string name) {
   return getTurboModule(name, nullptr) != nullptr ||
-      getTurboModule(name, {.moduleName = name***REMOVED***) != nullptr;
-***REMOVED***
+      getTurboModule(name, {.moduleName = name}) != nullptr;
+}
 
-***REMOVED*** // namespace react
-***REMOVED*** // namespace facebook
+} // namespace react
+} // namespace facebook

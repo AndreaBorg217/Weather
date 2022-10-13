@@ -15,10 +15,10 @@ std::shared_ptr<TurboModule> MainApplicationModuleProvider(
   // auto module = samplelibrary_ModuleProvider(moduleName, params);
   // if (module != nullptr) {
   //    return module;
-  // ***REMOVED***
+  // }
   // return rncore_ModuleProvider(moduleName, params);
   return rncore_ModuleProvider(moduleName, params);
-***REMOVED***
+}
 
-***REMOVED*** // namespace react
-***REMOVED*** // namespace facebook
+} // namespace react
+} // namespace facebook

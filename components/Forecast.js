@@ -8,53 +8,53 @@
  */
 
  import React from 'react';
- import {View, StyleSheet, Image, Text, FlatList***REMOVED*** from 'react-native';
- import {Capitalise_Each_Word, FormatTemp, FormatDay***REMOVED*** from '../services/StringFormaters.js'
- import {Format_Forecast_Data***REMOVED*** from '../services/DataUtils.js'
+ import {View, StyleSheet, Image, Text, FlatList} from 'react-native';
+ import {Capitalise_Each_Word, FormatTemp, FormatDay} from '../services/StringFormaters.js'
+ import {Format_Forecast_Data} from '../services/DataUtils.js'
 
 
- const Card = ({temp, icon, desc, time***REMOVED***) =>{
+ const Card = ({temp, icon, desc, time}) =>{
   let uri = 'https://openweathermap.org/img/wn/' + icon + '@4x.png';
   desc = Capitalise_Each_Word(desc?.toString())
   temp = FormatTemp(temp?.toString())
   let day = FormatDay(time)
 return (
-   <View style={styles.card***REMOVED***>
+   <View style={styles.card}>
 
-    <Text style = {styles.day***REMOVED***>{day***REMOVED***</Text>
+    <Text style = {styles.day}>{day}</Text>
     
-    <View style = {styles.tempCont***REMOVED***>
-      <Text style = {styles.temp***REMOVED***>{temp***REMOVED***</Text>
-      <Image style={styles.icon***REMOVED*** source={{uri: uri***REMOVED******REMOVED***/>
+    <View style = {styles.tempCont}>
+      <Text style = {styles.temp}>{temp}</Text>
+      <Image style={styles.icon} source={{uri: uri}}/>
     </View>
 
-    <Text style = {styles.desc***REMOVED***>{desc***REMOVED***</Text>
+    <Text style = {styles.desc}>{desc}</Text>
    
    </View>
  );
-***REMOVED***
+}
 
 
 
  const Forecast = (list) => {
   let data = list.forecastData;
    return (
-      <View style={styles.container***REMOVED***>
+      <View style={styles.container}>
 
-        <Text style = {styles.header***REMOVED***>5 day forecast</Text>
+        <Text style = {styles.header}>5 day forecast</Text>
         
-        <View style = {styles.days***REMOVED***> 
+        <View style = {styles.days}> 
           <FlatList
-            data={data***REMOVED***
-            renderItem={({item***REMOVED***) => <Card temp = {item.temp***REMOVED*** icon = {item.icon***REMOVED*** desc = {item.desc***REMOVED*** time ={item.time***REMOVED***/>***REMOVED***
-            keyExtractor={(item, index) => index***REMOVED***
-            horizontal = {true***REMOVED***
+            data={data}
+            renderItem={({item}) => <Card temp = {item.temp} icon = {item.icon} desc = {item.desc} time ={item.time}/>}
+            keyExtractor={(item, index) => index}
+            horizontal = {true}
           />
         </View>
         
       </View>
    );
- ***REMOVED***;
+ };
  
  const styles = StyleSheet.create({
    container: {
@@ -66,16 +66,16 @@ return (
      borderWidth: 1,
      borderRadius: 10,
      position: 'absolute',
-     transform: [{translateY: 240***REMOVED***]
-   ***REMOVED***,
+     transform: [{translateY: 240}]
+   },
    header: {
       fontSize: 22,
       color: 'white',
       backgroundColor: '#123',
       padding: 10,
       position: 'absolute',
-      transform: [{translateX: -40***REMOVED***,{translateY: -100***REMOVED***]
-   ***REMOVED***,
+      transform: [{translateX: -40},{translateY: -100}]
+   },
    card:{
     width: 150,
     height: 141,
@@ -86,34 +86,34 @@ return (
     borderRadius: 10,
     backgroundColor: '#123',
     margin: 10,
-   ***REMOVED***,
+   },
    day:{
     color: 'white',
     fontSize: 24,
     fontWeight: 'bold',
-    transform: [{translateX: -40***REMOVED***]
-   ***REMOVED***,
+    transform: [{translateX: -40}]
+   },
    tempCont:{
     flexDirection: 'row',
-   ***REMOVED***,
+   },
    temp:{
     color: 'white',
     fontSize: 35,
     padding: 10,
-   ***REMOVED***,
+   },
    icon:{
     width: 60,
     height: 70
-   ***REMOVED***,
+   },
    desc:{
     color: 'white',
     fontSize: 16,
     
-   ***REMOVED***,
+   },
    days:{
-    transform: [{translateY: 20***REMOVED***]
-   ***REMOVED***
- ***REMOVED***);
+    transform: [{translateY: 20}]
+   }
+ });
  
  export default Forecast;
  
